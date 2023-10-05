@@ -6,7 +6,7 @@
 
 
 ## Todo:
-Offwhite coloring on table
-align legend items
-relative sizing
-add font styles
+- Offwhite coloring on table
+- align legend items
+- relative sizing
+- add font styles
