@@ -3,15 +3,20 @@
 @tailwind utilities;
 
 :root {
+  --app-background: #f7fafc;
   --strat-one: #855cf8;
   --strat-two: #e289f2;
   --strat-three: #7879f1;
   --strat-four: #b085ff;
   --v-low: #7879f1;
-  --v-medium: #9B51e0;
+  --v-medium: #9b51e0;
   --v-high: #6148c2;
   --green: #3cc13b;
   --red: #f03738;
+}
+
+body {
+  background: var(--app-background);
 }
 
 .chip {
@@ -23,13 +28,13 @@
 }
 
 .medium-chip {
-    background: var(--v-medium);
+  background: var(--v-medium);
 
   /* @apply bg-color-[color:var(--v-medium)]; */
 }
 
 .low-chip {
-    background: var(--v-low);
+  background: var(--v-low);
 
   /* @apply bg-color-[color:var(--v-low)]; */
 }
