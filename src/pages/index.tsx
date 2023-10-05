@@ -104,7 +104,7 @@ const VoltilityChip = (type: Volitility) => {
 
 const StrategyPerformanceComponent = () => {
   return (
-    <div className="w-[855px] h-[440px] bg-white rounded-md p-[16px] text-[18px]">
+    <div className="w-[855px] h-[440px] bg-white rounded-md p-[16px] text-[18px] shadow-md">
       <h2 className="p-4">
         Strategy Performance
       </h2>
@@ -155,7 +155,7 @@ const PieChart = () => {
 
 function LendingAllocationComponent() {
   return (
-    <div className="w-[425px] h-[440px] bg-white rounded-md p-[16px] text-[18px]">
+    <div className="w-[425px] h-[440px] bg-white rounded-md p-[16px] text-[18px] shadow-md">
       <div className="flex flex-row justify-between">
         <h1> Lending Allocations</h1>
         <div className="text-zinc-500"> $5000 USDC</div>
