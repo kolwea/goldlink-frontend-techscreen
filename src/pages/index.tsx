@@ -117,7 +117,7 @@ const PieChart = () => {
 
   useEffect(() => {
     const refresh = async () => {
-      const ctx = document.getElementById("pieChart") as ChartItem
+      const ctx = await document.getElementById("pieChart") as ChartItem
       if (!!ctx && !chartInitialized) {
         new Chart(
           ctx,
@@ -141,8 +141,9 @@ const PieChart = () => {
         setChartInitialized(true)
       }
     }
-    refresh()
-  })
+
+    refresh().catch(e => console.log(e))
+  },[chartInitialized])
 
   return (<div><canvas id="pieChart"></canvas></div>);
 }
