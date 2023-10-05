@@ -28,6 +28,6 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs"
-, "src/pages/chart.js"  ],
+, "src/pages/chart.tsx"  ],
   "exclude": ["node_modules"]
 }

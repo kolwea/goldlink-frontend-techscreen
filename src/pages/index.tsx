@@ -128,11 +128,11 @@ const PieChart = () => {
               responsive: true,
               plugins: {
                 legend: {
-  
+
                   position: 'bottom',
-                  labels:{
-                    usePointStyle:true,
-                    pointStyle:"point"
+                  labels: {
+                    usePointStyle: true,
+                    pointStyle: "point"
                   }
                 },
                 title: {
@@ -148,7 +148,7 @@ const PieChart = () => {
     }
 
     refresh().catch(e => console.log(e))
-  },[chartInitialized])
+  }, [chartInitialized])
 
   return (<div><canvas id="pieChart"></canvas></div>);
 }
@@ -160,8 +160,10 @@ function LendingAllocationComponent() {
         <h1> Lending Allocations</h1>
         <div className="text-zinc-500"> $5000 USDC</div>
       </div>
-      <div className="w-[400px]">
-        <PieChart />
+      <div className='flex w-full justify-center align-middle'>
+        <div className="flex justify-center align-middle">
+          <PieChart />
+        </div>
       </div>
     </div>)
 }
