@@ -1,4 +1,4 @@
-import Chart, { ChartItem } from 'chart.js/auto'
+import Chart, { ChartConfiguration, ChartItem } from 'chart.js/auto'
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import { Table } from "antd";
@@ -94,6 +94,25 @@ const PIE_CHART_DATA = {
   }]
 };
 
+const PIE_CHART_OPTS: ChartConfiguration = {
+  type: "pie",
+  data: PIE_CHART_DATA,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        align: "center" ,
+        position: 'bottom',
+        labels: {
+          boxWidth: 400,
+          usePointStyle: true,
+          pointStyle: "point",
+        }
+      },
+    }
+  },
+}
+
 const VoltilityChip = (type: Volitility) => {
   let style = type.toLocaleLowerCase() + "-chip";
   return (
@@ -121,27 +140,7 @@ const PieChart = () => {
       if (!!ctx && !chartInitialized) {
         new Chart(
           ctx,
-          {
-            type: "pie",
-            data: PIE_CHART_DATA,
-            options: {
-              responsive: true,
-              plugins: {
-                legend: {
-
-                  position: 'bottom',
-                  labels: {
-                    usePointStyle: true,
-                    pointStyle: "point"
-                  }
-                },
-                title: {
-                  display: true,
-                  text: ''
-                }
-              }
-            },
-          }
+          PIE_CHART_OPTS
         );
         setChartInitialized(true)
       }
