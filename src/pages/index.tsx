@@ -12,7 +12,7 @@ const TABLE_DATA = [
     tvl: 100000,
     volitility: 'Low',
     collateral: 100,
-    pnl: 100
+    pnl: 100.84
   },
   {
     key: '2',
@@ -20,21 +20,21 @@ const TABLE_DATA = [
     tvl: 100000,
     volitility: 'Medium',
     collateral: 100,
-    pnl: 100,
+    pnl: -84.23,
   }, {
     key: '3',
     strategy: 'Strategy 3',
     tvl: 100000,
     volitility: 'Medium',
     collateral: 100,
-    pnl: 100
+    pnl: 24.53
   }, {
     key: '4',
     strategy: 'Strategy 4',
     tvl: 100000,
     volitility: 'High',
     collateral: 100,
-    pnl: 100
+    pnl: 45.98
   },
 ]
 
@@ -47,7 +47,7 @@ const TABLE_COLUMNS = [
   {
     title: 'TVL',
     dataIndex: 'tvl',
-    key: 'tvl',
+    key: 'tvl'
   },
   {
     title: 'Volitility',
@@ -67,16 +67,15 @@ const TABLE_COLUMNS = [
     dataIndex: 'pnl',
     key: 'pnl',
     render: (pnl: number) => {
-      if (pnl < 0) {
-        return <div className="">
-        </div>
-      }
+      return (pnl < 0) ?
+        <div className="text-[color:var(--red)]">{`- $${Math.abs(pnl)}`}</div> :
+        <div className="text-[color:var(--green)]">{`+ $${pnl}`}</div>
     }
   },
 ]
 
 const VoltilityChip = (type: Volitility) => {
-  let style = type.toLocaleLowerCase() +"-chip";
+  let style = type.toLocaleLowerCase() + "-chip";
   return (
     <div className={`${style} chip`} >
       <div className="px-2">{type}</div>
