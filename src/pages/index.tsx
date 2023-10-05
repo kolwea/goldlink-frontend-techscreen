@@ -1,6 +1,6 @@
 import Chart, { ChartItem } from 'chart.js/auto'
 import Head from "next/head";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from "antd";
 
 type Volitility = "Low" | "Medium" | "High"

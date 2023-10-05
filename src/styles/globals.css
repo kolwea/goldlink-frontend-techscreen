@@ -21,6 +21,7 @@ body {
 
 .chip {
   @apply flex min-w-[52px] max-w-fit  justify-center rounded-[12px] align-middle text-white;
+
 }
 
 .high-chip {
