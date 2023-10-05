@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --strat-one: #855cf8;
+  --strat-two: #e289f2;
+  --strat-three: #7879f1;
+  --strat-four: #b085ff;
+  --v-low: #7879f1;
+  --v-medium: #9B51e0;
+  --v-high: #6148c2;
+  --green: #3cc13b;
+  --red: #f03738;
+}
+
+.chip {
+  @apply flex min-w-[52px] max-w-fit  justify-center rounded-[12px] align-middle text-white;
+}
+
+.high-chip {
+  background: var(--v-high);
+}
+
+.medium-chip {
+    background: var(--v-medium);
+
+  /* @apply bg-color-[color:var(--v-medium)]; */
+}
+
+.low-chip {
+    background: var(--v-low);
+
+  /* @apply bg-color-[color:var(--v-low)]; */
+}
