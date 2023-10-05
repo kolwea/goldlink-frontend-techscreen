@@ -128,7 +128,12 @@ const PieChart = () => {
               responsive: true,
               plugins: {
                 legend: {
+  
                   position: 'bottom',
+                  labels:{
+                    usePointStyle:true,
+                    pointStyle:"point"
+                  }
                 },
                 title: {
                   display: true,
